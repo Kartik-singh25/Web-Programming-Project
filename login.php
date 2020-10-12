@@ -119,11 +119,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     opacity: 80%;
 
-
-a
-{
-    color: #7cc278;
 }
+
 	</style>
 </head>
 <body>

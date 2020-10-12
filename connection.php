@@ -1,9 +1,17 @@
-<?php
-$host = 'localhost';
-$username = 'root';
-$password = '';
-$dbname = 'mobile';
-@mysql_connect($host,$username,$password) or die ("could not connect to MySQL");
-@mysql_select_db($dbname) or die ("No database");
 
+<?php
+/* Database credentials. Assuming you are running MySQL
+server with default setting (user 'root' with no password) */
+define('DB_SERVER', 'localhost');
+define('DB_USERNAME', 'root');
+define('DB_PASSWORD', '');
+define('DB_NAME', 'userdb');
+ 
+/* Attempt to connect to MySQL database */
+$link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
+ 
+// Check connection
+if($link === false){
+    die("ERROR: Could not connect. " . mysqli_connect_error());
+}
 ?>
